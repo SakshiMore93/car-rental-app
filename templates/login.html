@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{%load static%}
+<link rel="stylesheet" href="{%static 'style.css'%}">
+{% block body %}
+
+
+<section class="h-100 gradient-form" style="background-color: #eee;">
+  {% include 'messages.html' %}
+  <section class="vh-100" style="background-color: #f0f2f5;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card shadow-lg rounded-3 text-black">
+          <div class="row g-0">
+            
+            <!-- Login Form -->
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+
+                <div class="text-center mb-4">
+                  {% load static %}
+                  <img src="{% static 'logo1.webp' %}" style="width: 120px;" alt="CarZest Logo" class="mb-3">
+                  <h4 class="mb-0">QuickRide</h4>
+                  <p class="text-muted">Please login to your account</p>
+                </div>
+
+                <form method="post" action="/signin">
+                  {% csrf_token %}
+                  
+                  <div class="form-group mb-4">
+                    <label for="loginusername">Username</label>
+                    <input type="text" id="loginusername" name="loginusername" class="form-control" placeholder="Username" required>
+                  </div>
+
+                  <div class="form-group mb-4">
+                    <label for="loginpassword">Password</label>
+                    <input type="password" id="loginpassword" name="loginpassword" class="form-control" placeholder="Password" required>
+                  </div>
+
+                  <div class="d-grid mb-4">
+                    <button type="submit" class="btn btn-primary btn-sm ">Log In</button>
+                  </div>
+                </form>
+
+                <div class="text-center">
+                  <p class="mb-0">Don't have an account? 
+                    <a class="btn btn-outline-danger btn-sm ms-2" href="/register">Create New</a>
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Image Section -->
+            <div class="col-lg-6 d-none d-lg-block" 
+              style="background-image: url({% static 'oguz-yagiz-kara-kGnwo6LdGk8-unsplash.jpg' %}); background-size: cover; background-position: center; border-top-right-radius: 0.75rem; border-bottom-right-radius: 0.75rem;">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{%endblock%}

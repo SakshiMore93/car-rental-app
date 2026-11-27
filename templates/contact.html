@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{%load static%}
+<link rel="stylesheet" href="{%static 'style.css'%}">
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+
+
+   <section class="h-100" style="background-color: #f2f2f2;">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-md-12">
+        <div class="card shadow rounded-3 overflow-hidden">
+          <div class="row no-gutters">
+            
+            <!-- Form Section -->
+            <div class="col-lg-6 col-md-12">
+              <div class="card-body p-5">
+                <div class="text-center mb-4">
+                  <h2 class="font-weight-bold">Contact Us</h2>
+                  <p class="text-muted">We would love to hear from you!</p>
+                </div>
+
+                <form method="post" action="/contact">
+                  {% csrf_token %}
+
+                  <div class="form-group mb-3">
+                    <label for="contactname">Full Name</label>
+                    <input type="text" class="form-control" id="contactname" name="contactname" placeholder="Your Name" required>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="contactnumber">Phone Number</label>
+                    <input type="tel" class="form-control" id="contactnumber" name="contactnumber" placeholder="eg: 9015789452" required>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="contactemail">Email</label>
+                    <input type="email" class="form-control" id="contactemail" name="contactemail" placeholder="something@gmail.com" required>
+                  </div>
+
+                  <div class="form-group mb-4">
+                    <label for="contactmsg">Message</label>
+                    <textarea class="form-control" id="contactmsg" name="contactmsg" rows="4" placeholder="Write your message here" required></textarea>
+                  </div>
+
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+            <!-- Image Section -->
+            <div class="col-lg-6 d-none d-lg-block">
+              <div style="background-image: url({% static 'cont.jpg' %}); background-size: cover; background-position: center; height: 100%;"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+{% endblock body %}

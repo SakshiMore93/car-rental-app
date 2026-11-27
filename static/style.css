@@ -1,0 +1,367 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   GLOBAL STYLING
+========================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, #eef2ff, #f8fafc);
+    font-family: 'Poppins', sans-serif;
+    color: #1e293b;
+}
+
+/* =========================
+   GRADIENT SECTION
+========================= */
+
+.gradient-custom-2{
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9, #2563eb);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+label{
+    font-weight: 600;
+    color: #334155;
+}
+
+/* MODERN INPUT */
+
+.custom-input,
+.form-control{
+    border-radius: 12px;
+    border: 1px solid #dbeafe;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.custom-input:focus,
+.form-control:focus{
+    border-color: #38bdf8;
+    box-shadow: 0 0 12px rgba(56,189,248,0.3);
+}
+
+/* =========================
+   PRINT SECTION
+========================= */
+
+@media screen {
+    #printSection {
+        display: none;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #printSection,
+    #printSection * {
+        visibility: visible;
+    }
+
+    #printSection {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+/* =========================
+   CARS MAIN SECTION
+========================= */
+
+.cars-main {
+    background-color: transparent;
+}
+
+/* =========================
+   HEADER SECTION
+========================= */
+
+.cars-header{
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.cars-header h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.cars-header p{
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #cbd5e1;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.car-card{
+    border-radius: 20px;
+    overflow: hidden;
+    border: none;
+    transition: 0.4s ease;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.car-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+.car-card img{
+    height: 240px;
+    object-fit: cover;
+}
+
+.car-card h5{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.price-text{
+    font-weight: bold;
+    color: #16a34a;
+    font-size: 1.2rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.rent-btn{
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 10px 24px;
+    background: linear-gradient(135deg,#38bdf8,#2563eb);
+    border: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.rent-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(37,99,235,0.3);
+}
+
+/* =========================
+   BOOKING SECTION
+========================= */
+
+.booking-container{
+    max-width: 950px;
+}
+
+.booking-card{
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    border: none;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.booking-card .card-header{
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    border-radius: 15px 15px 0 0;
+    padding: 20px;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+    text-align: center;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-title::after{
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(to right,#38bdf8,#2563eb);
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+/* =========================
+   BILL BOX
+========================= */
+
+.bill-box{
+    background: linear-gradient(135deg,#2563eb,#38bdf8);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(37,99,235,0.25);
+}
+
+.bill-box h4{
+    margin-bottom: 10px;
+}
+
+.bill-box p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* =========================
+   TOTAL PRICE
+========================= */
+
+.total-price{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #16a34a;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.action-btns button,
+.action-buttons button{
+    margin: 10px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.action-btns button:hover,
+.action-buttons button:hover{
+    transform: translateY(-4px);
+}
+
+/* =========================
+   RECEIPT CARD
+========================= */
+
+.receipt-card{
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* RECEIPT TITLE */
+
+.receipt-title{
+    text-align: center;
+    font-weight: 700;
+    background: linear-gradient(135deg,#38bdf8,#2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+/* RECEIPT TEXT */
+
+.receipt-text{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e3a8a;
+}
+
+/* RECEIPT SUB */
+
+.receipt-sub{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* RECEIPT TOTAL */
+
+.receipt-total{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #2563eb;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px){
+
+    .cars-header h1{
+        font-size: 2.2rem;
+    }
+
+    .cars-header p{
+        font-size: 1rem;
+    }
+
+    .booking-card{
+        padding: 20px;
+    }
+
+    .bill-box p{
+        font-size: 24px;
+    }
+
+    .receipt-text{
+        font-size: 18px;
+    }
+
+    .receipt-total{
+        font-size: 22px;
+    }
+
+    .action-buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .car-card img{
+        height: 200px;
+    }
+}

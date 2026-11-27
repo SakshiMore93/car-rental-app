@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us{% endblock title %}
+
+{% block body %}
+
+ <!-- About Us Section -->
+<section class="bg-info text-white py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 text-center text-lg-left">
+        <h1 class="display-4 font-weight-bold">About Us!</h1>
+        <p class="lead my-4">
+          QuickRide has been delivering trusted car rental services with comfort, safety, and style for years. 
+    Our modern fleet and customer-first approach ensure a smooth and premium travel experience for every journey.
+        </p>
+        <a class="btn btn-dark btn-lg" href="#why-us" role="button">Learn More</a>
+      </div>
+      <div class="col-lg-6 text-center mt-4 mt-lg-0">
+        {% load static %}
+        <img src="{% static 'contact-us-customer-support-concept.jpg' %}" class="img-fluid rounded shadow " alt="About Us">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="py-5" id="why-us" style="background-color: #f8f9fa;">
+  <div class="container">
+    <h1 class="text-center mb-5">Why Choose Us?</h1>
+    <div class="row text-center">
+
+      <!-- Safe -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="{% static 'trust.jpg' %}" class="card-img-top rounded" alt="Safe">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Safe</h5>
+            <p class="card-text">Most trustworthy website for renting a vehicle in the world. All vehicles are well-maintained and regularly serviced.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Affordable Prices -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="{% static 'affordable.jpg' %}" class="card-img-top rounded" alt="Affordable Prices">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Affordable Prices</h5>
+            <p class="card-text">All rents are affordable. Online payments are safe, and vehicles can be returned if there is a problem.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hygienic -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="{% static 'car wash.jpg' %}" class="card-img-top rounded" alt="Hygienic">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Hygienic</h5>
+            <p class="card-text">Your comfort is our priority! All vehicles are well-maintained and hygienic.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock body %}

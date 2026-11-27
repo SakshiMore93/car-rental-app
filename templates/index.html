@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+
+<style>
+.carousel-item.carousel-with-overlay::before {
+    height: 100%;
+    width: 100%;
+    
+    content: ""; 
+    
+    background: #272020ff; 
+    opacity: 0.35;    
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    z-index: 2;
+}
+
+.carousel-item.active.carousel-with-overlay img {
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-caption-content {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    
+    z-index: 5;
+}
+
+.carousel-item {
+    height: 700px;
+}
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+}
+</style>
+
+<div class="container-fluid px-0">
+  {% include 'messages.html' %}
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active carousel-with-overlay"style="position: relative; ">
+            {%load static%}
+            <img src="{%static "josh-berquist-_4sWbzH5fp8-unsplash.jpg"%}" 
+             class="d-block w-100 h-10" 
+             alt="car"
+             style="filter: blur(0px);">
+              
+             <div class="carousel-caption-content">
+                    <h1 class="display-3 font-weight-bold">Discover Your Next Adventure</h1>
+                    <p class="lead mt-2 font-weight-bold">Wide range of cars available for rent at affordable prices.</p>
+                    <a href="/signin" class="btn btn-lg btn-success mt-4">Book Now</a>
+                </div>
+          </div>
+          <div class="carousel-item carousel-with-overlay">
+            {%load static%}
+            <img src="{%static "pexels-introspectivedsgn-4928613.jpg"%}"
+             class="d-block w-100" alt="car" style="filter: blur(0px);">
+
+             <div class="carousel-caption-content">
+                    <h1 class="display-3 font-weight-bold">Discover Your Next Adventure</h1>
+                    <p class="lead mt-2 font-weight-bold">Wide range of cars available for rent at affordable prices.</p>
+                    <a href="/signin" class="btn btn-lg btn-success mt-4">Book Now</a>
+                </div>
+
+          </div>
+          <div class="carousel-item carousel-with-overlay">
+             {%load static%}
+            <img src="{%static "pexels-mikebirdy-205740.jpg"%}"
+            class="d-block w-100" alt="car" style="filter: blur(0px);">
+
+            <div class="carousel-caption-content">
+                    <h1 class="display-3 font-weight-bold">Discover Your Next Adventure</h1>
+                    <p class="lead mt-2 font-weight-bold">Wide range of cars available for rent at affordable prices.</p>
+                    <a href="/signin" class="btn btn-lg btn-success mt-4">Book Now</a>
+                </div>
+
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+</div>
+
+
+  
+  
+</div>
+  
+
+{% endblock body %}
